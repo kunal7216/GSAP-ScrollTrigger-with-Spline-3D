@@ -1,1 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+:root {
+  --font1: "Poppins";
+  --fontSizeMenu: 1vw;
+  --fontSizeH1: 16vw;
+  --fontSizeP: 1.48vw;
+  --fontSizeA: 3vw;
+} 
+
+body {
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  font-family: var(--font1);
+  overflow-x: hidden;
+}
+
+.flex, .flex__col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex__col {
+  flex-direction: column;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #fff;
+}
+
+main.flex__col {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.menu {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 50%;
+  width: calc(100% - 80px);
+  justify-content: space-between;
+  margin: 40px 0;
+  transform: translatex(-50%);
+}
+
+.menu a {
+  font-size: var(--fontSizeMenu);
+  font-weight: 600;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.menu ul {
+  gap: 0 60px;
+}
+
+.menu ul li {
+  display: flex;
+}
+
+.threed {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+#canvas3d {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  position: relative;
+  width: 96vw;
+  height: calc(100vh - 4vw);
+  padding: 2vw;
+}
+
+.title div {
+  position: absolute;
+  bottom: 10px;
+  left: 2vw;
+  font-size: var(--fontSizeP);
+}
+
+h1 {
+  width: 100%;
+  margin: 0;
+  font-size: var(--fontSizeH1);
+  font-weight: 300;
+  line-height: 100%;
+  text-align: left;
+}
+
+.text {
+  width: 96vw;
+  min-height: 100vh;
+  padding: 40vh 2vw 100vh 2vw;
+}
+
+p {
+  font-size: var(--fontSizeP);
+  max-width: 600px;
+}
+
+p a {
+  font-size: var(--fontSizeA);
+  cursor: pointer;
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --fontSizeMenu: 16px;
+    --fontSizeH1: 240px;
+    --fontSizeP: 22px;
+    --fontSizeA: 30px;
+  }
+}
+
+@media (max-height: 1000px) {
+  :root {
+    --fontSizeH1: 10vw;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --fontSizeMenu: 11px;
+    --fontSizeH1: 16vw;
+    --fontSizeP: 11px;
+    --fontSizeA: 14px;
+  }
+  .menu {
+    width: 90vw;
+    margin: 4vw 0;
+  }
+  .menu ul {
+    gap: 0 2vw;
+  }
+}
