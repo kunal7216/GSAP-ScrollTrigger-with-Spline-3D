@@ -1,3 +1,4 @@
+
 import { Application } from "https://cdn.skypack.dev/@splinetool/runtime@0.9.298"
 
 console.clear()
